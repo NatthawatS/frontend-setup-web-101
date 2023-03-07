@@ -1,13 +1,16 @@
 import type { AppProps } from 'next/app'
-import Head from 'next/head'
 import StyledProvider from '@/styles/Provider'
+import { GlobalStyles as BaseStyles } from 'twin.macro'
 
-export default function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <StyledProvider>
+        <BaseStyles />
         <Component {...pageProps} />
       </StyledProvider>
     </>
   )
 }
+
+export default MyApp

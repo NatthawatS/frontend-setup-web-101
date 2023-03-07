@@ -1,6 +1,5 @@
-import { CacheProvider, css, Global } from '@emotion/react'
+import { CacheProvider, Global, css } from '@emotion/react'
 import createEmotionCache from '@/lib/createEmotionCache'
-import { GlobalStyles as BaseStyles } from 'twin.macro'
 import CustomTailwindCSS from './CustomTailwindCSS'
 import { ProviderProps } from './types'
 
@@ -13,7 +12,6 @@ export const NoControlStyledProvider = ({ children }: ProviderProps) => {
 
   return (
     <CacheProvider value={clientSideEmotionCache}>
-      <BaseStyles />
       <Global
         styles={css`
           ${CustomTailwindCSS}

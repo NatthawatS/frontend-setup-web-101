@@ -78,6 +78,7 @@ const HomePage = () => {
           <span tw="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
             #winter
           </span>
+          <StyledButtonPrimary>ss</StyledButtonPrimary>
         </div>
       </div>
     </div>
@@ -85,6 +86,17 @@ const HomePage = () => {
 }
 
 export default HomePage
+
+const StyledButtonPrimary = styled.button`
+  ${tw`py-3 px-8 uppercase rounded border border-gray-50 hover:bg-gray-50 duration-200`}; // added duration-200 (optional)
+
+  & {
+  }
+
+  &:hover {
+    font-size: 2rem;
+  }
+`
 
 // still works despite importing from twin.macro
 const StyledButton = styled.button`

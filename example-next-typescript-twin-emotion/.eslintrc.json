@@ -9,15 +9,14 @@
       "version": "detect" // Tells eslint-plugin-react to automatically detect the version of React to use
     }
   },
-
+  "root": true,
   "plugins": ["@typescript-eslint", "prettier"],
   "extends": [
     "next/core-web-vitals",
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
-    "prettier",
-    "prettier/@typescript-eslint"
+    "prettier"
   ],
   "env": {
     "es6": true,
@@ -38,6 +37,7 @@
     "@typescript-eslint/ban-ts-ignore": ["off"],
     "@typescript-eslint/no-unescaped-entities": 0,
     "react/no-unescaped-entities": 0,
+    "react/no-unknown-property": ["error", { "ignore": ["tw"] }],
     "quotes": ["error", "single", { "allowTemplateLiterals": true }],
     "object-curly-spacing": ["error", "always"],
     "no-empty-pattern": ["off"],
