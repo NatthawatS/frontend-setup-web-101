@@ -8,7 +8,9 @@
           "importSource": "@emotion/react"
         }
       }
-    ]
+    ],
+    "@emotion/babel-preset-css-prop",
+    "@babel/preset-typescript"
   ],
   "plugins": [
     [
@@ -20,7 +22,8 @@
         }
       }
     ],
-    "@emotion/babel-plugin",
-    "babel-plugin-macros"
+    "babel-plugin-twin",
+    "babel-plugin-macros",
+    "@emotion/babel-plugin"
   ]
 }

@@ -1,7 +1,10 @@
 {
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaVersion": 2018,
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
     "sourceType": "module"
   },
   "settings": {
@@ -9,8 +12,9 @@
       "version": "detect" // Tells eslint-plugin-react to automatically detect the version of React to use
     }
   },
+  "ignorePatterns": ["next.config.js"],
   "root": true,
-  "plugins": ["@typescript-eslint", "prettier"],
+  "plugins": ["@emotion", "@typescript-eslint", "prettier"],
   "extends": [
     "next/core-web-vitals",
     "eslint:recommended",
@@ -25,23 +29,29 @@
     "node": true
   },
   "rules": {
-    "react/react-in-jsx-scope": 0,
-    "react/display-name": 0,
-    "@typescript-eslint/explicit-function-return-type": 0,
-    "@typescript-eslint/explicit-module-boundary-types": 0,
-    "@typescript-eslint/explicit-member-accessibility": 0,
-    "@typescript-eslint/indent": 0,
-    "@typescript-eslint/member-delimiter-style": 0,
-    "@typescript-eslint/no-var-requires": 0,
-    "@typescript-eslint/no-use-before-define": 0,
+    "@emotion/import-from-emotion": "error",
+    "@emotion/styled-import": "error",
+    "@emotion/pkg-renaming": "error",
+    "@typescript-eslint/no-inferrable-types": "error",
+    "@emotion/jsx-import": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-uses-react": "off",
+    "react/display-name": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/explicit-member-accessibility": "off",
+    "@typescript-eslint/indent": "off",
+    "@typescript-eslint/member-delimiter-style": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/no-use-before-define": "off",
     "@typescript-eslint/ban-ts-ignore": ["off"],
-    "@typescript-eslint/no-unescaped-entities": 0,
-    "react/no-unescaped-entities": 0,
-    "react/no-unknown-property": ["error", { "ignore": ["tw"] }],
+    "@typescript-eslint/no-unescaped-entities": "off",
+    "react/no-unescaped-entities": "off",
+    "react/no-unknown-property": ["error", { "ignore": ["tw", "css"] }],
     "quotes": ["error", "single", { "allowTemplateLiterals": true }],
     "object-curly-spacing": ["error", "always"],
     "no-empty-pattern": ["off"],
-    "no-undef": ["error"],
+    "no-undef": ["off"],
     "no-var": ["error"],
     "@typescript-eslint/no-unused-vars": [
       2,

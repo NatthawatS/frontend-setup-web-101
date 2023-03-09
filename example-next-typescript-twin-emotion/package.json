@@ -1,5 +1,5 @@
 {
-  "name": "example-next-typescript-twin-emotion",
+  "name": "farawellfuneral-landing-page",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@emotion/babel-preset-css-prop": "^11.10.0",
     "@emotion/cache": "^11.10.5",
     "@emotion/core": "^11.0.0",
     "@emotion/css": "^11.10.6",
@@ -29,18 +28,27 @@
     "@babel/core": "^7.21.0",
     "@babel/preset-env": "^7.20.2",
     "@babel/preset-react": "^7.18.6",
+    "@babel/preset-typescript": "^7.21.0",
+    "@emotion/babel-plugin": "^11.10.6",
+    "@emotion/babel-preset-css-prop": "^11.10.0",
+    "@emotion/eslint-plugin": "^11.10.0",
+    "@tailwindcss/typography": "^0.5.9",
     "@typescript-eslint/eslint-plugin": "^5.54.1",
     "@typescript-eslint/parser": "^5.54.1",
     "babel-plugin-emotion": "^11.0.0",
     "babel-plugin-macros": "^3.1.0",
     "babel-plugin-module-resolver": "^5.0.0",
     "babel-plugin-react-require": "^3.1.3",
+    "babel-plugin-twin": "^1.1.0",
     "eslint": "8.35.0",
     "eslint-config-prettier": "^8.7.0",
+    "eslint-import-resolver-typescript": "^3.5.3",
+    "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
     "husky": "^8.0.3",
     "prettier": "^2.8.4",
+    "prettier-plugin-tailwindcss": "^0.2.4",
     "tailwindcss": "^3.2.7",
     "twin.macro": "^3.1.0"
   },
